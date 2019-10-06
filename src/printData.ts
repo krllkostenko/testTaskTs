@@ -1,3 +1,4 @@
+'use strict';
 const printData = (digits: string, amount: number, percentage: string) => {
     const results = document.getElementById('results');
     if (results) {
@@ -6,4 +7,11 @@ const printData = (digits: string, amount: number, percentage: string) => {
     }
 };
 
-export default printData;
+const printDefaultArray = (arr: Array<number>) => {
+    const defaultArray = document.getElementById('default-string');
+    if (defaultArray) {
+        defaultArray.innerHTML = `Total amount of 1s and 0s: ${arr.length}`;
+    }
+};
+
+export { printData, printDefaultArray };
